@@ -77,7 +77,8 @@ em {
 }
 
 p {
-    color: var(--c-ink-secondary);
+    color: var(--c-heavy-text);
+    opacity: 0.8;
     max-width: 65ch; /* Optimal reading length */
 }
 
@@ -214,26 +215,12 @@ img {
 }
 
 #navbar.scrolled {
-    background-color: rgba(139, 26, 43, 0.95); /* Wine Red */
+    background-color: rgba(255, 245, 230, 0.95); /* Cream */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: var(--space-3) 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
     border-bottom: 1px solid var(--c-ink-border);
-}
-
-#navbar.scrolled .nav-links a:not(.btn-primary),
-#navbar.scrolled .logo-title,
-#navbar.scrolled .mobile-menu-btn {
-    color: var(--c-cream);
-}
-
-#navbar.scrolled .nav-links a:not(.btn-primary)::after {
-    background-color: var(--c-cream);
-}
-
-#navbar.scrolled .signature-img {
-    filter: brightness(0) invert(98%) sepia(9%) saturate(464%) hue-rotate(338deg) brightness(108%) contrast(97%) !important;
 }
 
 .nav-container {
@@ -372,9 +359,9 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: var(--c-white);
+    background-color: var(--c-accent);
     padding: var(--space-3) var(--space-4);
-    border: 1px solid var(--c-ink);
+    border: none;
 }
 
 .badge-title {
@@ -383,7 +370,7 @@ img {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--c-ink);
+    color: var(--c-white);
 }
 
 /* ==========================================================================
@@ -391,10 +378,8 @@ img {
    ========================================================================== */
 
 .trust-bar {
-    border-top: 1px solid var(--c-ink-border);
-    border-bottom: 1px solid var(--c-ink-border);
     padding: 12px 0;
-    background-color: rgba(139, 26, 43, 0.05); /* Rojo vino al 5% */
+    background-color: var(--c-accent); /* Dorado 100% */
 }
 
 .trust-bar-content {
@@ -411,11 +396,11 @@ img {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.02em;
-    color: var(--c-ink-light);
+    color: var(--c-white);
 }
 
 .trust-item svg {
-    color: var(--c-accent);
+    color: var(--c-white);
 }
 
 /* ==========================================================================
@@ -701,7 +686,7 @@ img {
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: var(--space-1);
-    color: var(--c-ink);
+    color: var(--c-heavy-text);
 }
 
 .form-group .required {
@@ -713,19 +698,28 @@ img {
     width: 100%;
     min-height: 44px;
     padding: 10px 12px;
-    border: 1px solid rgba(26, 46, 36, 0.15); /* Bordes (15%) */
+    border: 1px solid var(--c-ink-border);
     border-radius: var(--radius-sm);
-    background-color: var(--c-white); /* Campos de formulario */
+    background-color: var(--c-white);
     font-family: var(--font-sans);
     font-size: 1rem;
-    color: var(--c-ink);
+    color: var(--c-ink-text);
     transition: var(--transition-subtle);
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--c-ink);
+    border-color: var(--c-accent);
+}
+
+.editorial-form .btn-primary {
+    background-color: var(--c-accent);
+    color: var(--c-heavy-text);
+}
+
+.editorial-form .btn-primary:hover {
+    background-color: #A67D2E;
 }
 
 .step-2-intro {
@@ -800,11 +794,14 @@ img {
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 4px;
-    color: var(--c-ink-light);
+    color: var(--c-ink);
+    opacity: 0.7;
+    transition: var(--transition-subtle);
 }
 
 .email-link:hover {
-    color: var(--c-ink);
+    color: var(--c-ink-light);
+    opacity: 1;
 }
 
 /* ==========================================================================
@@ -812,9 +809,13 @@ img {
    ========================================================================== */
 
 .footer {
-    background-color: var(--c-ink);
+    background-color: var(--c-heavy-text);
     color: var(--c-white);
     padding: 0;
+}
+
+.footer p {
+    color: var(--c-white);
 }
 
 .footer-top {
@@ -882,7 +883,7 @@ img {
     font-family: var(--font-sans);
     font-size: 14px;
     color: var(--c-white);
-    opacity: 0.7;
+    opacity: 0.9;
     text-decoration: none;
     transition: var(--transition-subtle);
 }
@@ -898,7 +899,7 @@ img {
 .footer-text {
     font-family: var(--font-sans);
     font-size: 13px;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .footer-social {
@@ -940,7 +941,7 @@ img {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea separadora 10% */
     padding: 16px 0;
 }
 
@@ -954,6 +955,7 @@ img {
 .footer-legal-left, .footer-legal-center, .footer-legal-right {
     font-family: var(--font-sans);
     font-size: 11px;
+    opacity: 0.4; /* Barra legal inferior 40% */
 }
 
 .footer-legal-left, .footer-legal-right {
