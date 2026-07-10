@@ -241,10 +241,9 @@ img {
     object-fit: contain;
 }
 
-/* Colors for the black PNG signature */
-/* Approximates to --c-ink (#1a2e24) */
+/* Approximates to --c-ink (#8B1A2B) */
 .filter-ink {
-    filter: brightness(0) invert(13%) sepia(21%) saturate(1210%) hue-rotate(103deg) brightness(94%) contrast(89%);
+    filter: brightness(0) invert(11%) sepia(79%) saturate(3231%) hue-rotate(338deg) brightness(102%) contrast(92%);
 }
 
 /* Approximates to --c-cream (#fbf9f4) */
@@ -256,7 +255,8 @@ img {
     width: 220px;
     height: auto;
     margin-bottom: 2px;
-    filter: brightness(0) invert(13%) sepia(21%) saturate(1210%) hue-rotate(103deg) brightness(94%) contrast(89%);
+    /* Gold (#C9963A) */
+    filter: brightness(0) invert(60%) sepia(62%) saturate(450%) hue-rotate(360deg) brightness(90%) contrast(89%);
     transition: transform var(--transition-subtle);
 }
 
