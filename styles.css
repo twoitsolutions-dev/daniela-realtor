@@ -277,7 +277,7 @@ img {
     align-items: center;
 }
 
-.nav-links a {
+.nav-links a:not(.btn-primary) {
     color: var(--c-ink);
     text-decoration: none;
     font-size: 0.95rem;
